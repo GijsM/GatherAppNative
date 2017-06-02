@@ -1,0 +1,57 @@
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fitsSystemWindows="true"
+tools:context="com.gijsm.gatherappnative.activity.MainActivity">
+
+<include layout="@layout/content_main" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.gijsm.gatherappnative.activity.MapsActivity" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/remove"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|end"
+            android:scaleType="center"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_delete_black_24dp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:tint="#fff"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/getid"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|end"
+            android:scaleType="center"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_content_copy_black_24dp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:tint="#fff"/>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
